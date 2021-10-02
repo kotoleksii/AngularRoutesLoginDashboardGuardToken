@@ -1,5 +1,135 @@
-.center {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
+.landing-wrapper {
+  margin: 40px;
+  padding-right: 70px;
+}
+
+.description-wrapper {
+  display: flex;
+  margin: 52px 52px 0;
+}
+
+.description-wrapper b {
+  color: black;
+}
+
+.description-image img {
+  height: 260px;
+}
+
+.description-info {
+  margin-left: 40px;
+}
+
+.description-info-header {
+  margin-bottom: 32px;
+}
+
+.description-info-body p {
+  margin-bottom: 30px;
+}
+
+.description-info-footer {
+  margin-bottom: 25px;
+}
+
+.description-info-footer-head {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description-info-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.description-info-footer ul li {
+  list-style-type: none;
+  flex: 0 0 33.333333%;
+}
+
+.description-info-icons ul {
+  display: flex;
+  padding-left: 0;
+}
+
+.description-info-icons ul li {
+  list-style-type: none;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.description-info-icons ul li img {
+  height: 33px;
+  border: solid 1px gray;
+}
+
+.details-wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  gap: 50px;
+  margin-left: 55px;
+}
+
+.details-wrapper-column1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+  text-align: right;
+}
+
+.details-wrapper-box div{
+  width:200px;
+  display: inline-block;
+}
+
+.details-wrapper-row {
+  margin-top: 60px;
+}
+
+.details-wrapper-column2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+}
+
+.details-wrapper-column3 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+}
+
+.details-wrapper-specialities h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.details-wrapper-specialities p {
+  margin-bottom: 25px;
+}
+
+hr {
+  background-color: #eb6b44;
+  border: 0 none;
+  color: #eb6b44;
+  height: 4px;
+}
+
+h1 {
+  margin-bottom: 0px;
+  font-size: 31px;
+}
+
+h2 {
+  color: #d87151;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+p {
+  color: grey;
 }

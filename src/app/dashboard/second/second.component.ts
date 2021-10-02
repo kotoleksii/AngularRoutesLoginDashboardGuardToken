@@ -3,20 +3,16 @@ import {SecondService} from "./second.service";
 import {MatTable, MatTableDataSource} from "@angular/material/table";
 import {MatPaginator, MatPaginatorIntl, PageEvent} from "@angular/material/paginator";
 import {Subject} from "rxjs";
-import { MatSort } from '@angular/material/sort';
+import {MatSort} from '@angular/material/sort';
 
 @Injectable()
 export class MyCustomPaginatorIntl implements MatPaginatorIntl {
   changes = new Subject<void>();
 
-  // For internationalization, the `$localize` function from
-  // the `@angular/localize` package can be used.
   firstPageLabel = `First page`;
   itemsPerPageLabel = `Items per page:`;
   lastPageLabel = `Last page`;
 
-  // You can set labels to an arbitrary string too, or dynamically compute
-  // it through other third-party internationalization libraries.
   nextPageLabel = 'Next page';
   previousPageLabel = 'Previous page';
 
@@ -41,7 +37,7 @@ export class SecondComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort | undefined;
 
   displayedColumns: string[] = ['name', 'birth_year', 'created', 'edited'];
-  dataSource:MatTableDataSource<any> | any ;
+  dataSource: MatTableDataSource<any> | any;
 
   constructor(private secondService: SecondService) {
   }
@@ -50,7 +46,7 @@ export class SecondComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.secondService.getPeopleFromSwapi().subscribe(res=> {
+    this.secondService.getPeopleFromSwapi().subscribe(res => {
       const result = res.results;
       let arr: any[] = [];
       result.forEach((el: any) => {
@@ -62,9 +58,9 @@ export class SecondComponent implements OnInit, AfterViewInit {
         };
         arr.push(obj);
       });
-     this.dataSource = new MatTableDataSource<any>(arr);
-     this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+      this.dataSource = new MatTableDataSource<any>(arr);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
   }
 

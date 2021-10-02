@@ -15,7 +15,6 @@ const routes: Routes = [
   }
 ]
 
-// @ts-ignore
 @NgModule({
   declarations: [SecondComponent],
   imports: [
